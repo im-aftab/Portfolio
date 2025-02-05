@@ -1,0 +1,142 @@
+* {
+   padding: 0;
+   margin: 0; 
+}
+body {
+    background-color: rgb(0, 0, 36);
+    color : white;
+}
+#rubikwp-regular {
+    font-size: 50px;
+    text-align: center;
+    font-family: "Kanit", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    background-color: rgb(18, 18, 62);
+}
+nav ul{
+    display:flex;
+    justify-content: center;   
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 23px;
+    padding: 5px;
+}
+
+#profile_pic {
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#myName {
+    font-family: "Rubik Wet Paint", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+#about  {
+    display: flex;
+    justify-content: center;
+    padding: 30px 50px;
+}
+
+.left-about {
+    flex: 1;
+}
+
+.left-about p {
+    margin: 0 0 0 30px;
+    width: 500px;
+}
+
+.right-about {
+    flex: 1;
+
+}
+
+.right-about ul {
+    list-style: none;
+    margin-left: 30px;
+}
+
+#projects {
+    display:flex;
+    div {
+        margin: 50px;
+        article{
+            padding: 30px 0 0 30px;
+            p{
+                padding: 30px 0 0 30px ;
+            }
+        }
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+/*Add the below CSS code to your style.css*/
+
+.company-details{
+    overflow: hidden;
+    padding: 3em 0em;
+    background: rgb(14, 21, 76);
+    text-align: center;
+    margin-top: 5em;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+#footer #icon{
+    display: block;
+    margin-bottom: 1em;
+    font-size: 3em;
+}
+
+.copyright
+{
+    overflow: hidden;
+    padding: 2em 0em;
+    border-top: 20px solid rgb(23, 16, 97);
+    text-align: center;
+    background: rgb(23, 25, 92);
+}
+
+.copyright a
+{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+
+
+@media (max-width:950px) { 
+    #about{
+        display: block;
+    }
+    .left-about p {
+        width: fit-content;
+        
+    }
+}
+@keyframes glow {
+    from{text-shadow: 0 0 10px #ffffff, 0 0 20px #fed5d5, 0 0 30px #ff8282, 0 0 40px #f72929, 0 0 50px #f70808, 0 0 60px #e60073, 0 0 70px #b10404;}
+} 
+     
