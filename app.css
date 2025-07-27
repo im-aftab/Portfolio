@@ -50,6 +50,16 @@ nav ul li {
     font-family: "Kanit", serif;
 
 }
+.toggle-text {
+      font-weight: bold;
+      color: #0066cc;
+      opacity: 1;
+      transition: opacity 0.5s;
+      /* you can add more styles here */
+    }
+.fade {
+  opacity: 0;
+}
 
 #about  {
     display: flex;
