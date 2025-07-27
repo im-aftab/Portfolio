@@ -9,7 +9,7 @@ button.addEventListener("click",function() {
         elementToToggle.style.display = "none";
     }
 });
-const phrases = ["Web developer", "also learning Data analytics"];
+const phrases = ["a Web developer", "also learning Data analytics"];
     let idx = 0;
     const toggleElem = document.getElementById('toggleText');
 
