@@ -35,6 +35,9 @@ Live site: [https://im-aftab.github.io/Portfolio/](https://im-aftab.github.io/Po
   - Improved responsiveness with media queries.
   - Updated README with professional documentation.
   - Configured Git locally for smoother commits and pushes.
+  - 6th MAY
+      - Fixed mobile nav toggle background and X color
+      - Made site responsive for mobile devices
 
 *(Future updates will be logged here in chronological order to track progress.)*
 
