@@ -42,10 +42,15 @@ Live site: [https://im-aftab.github.io/Portfolio/](https://im-aftab.github.io/Po
 
 ## 📂 Project Structure
 Portfolio/
+
 │── index.html        # Main entry point
+
 │── style.css         # Styling and responsiveness
+
 │── script.js         # Interactive features
+
 │── README.md         # Documentation
+
 
 
 ---
