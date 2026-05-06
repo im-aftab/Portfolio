@@ -24,3 +24,18 @@ const phrases = ["a Web Developer", "also learning Data analytics"];
         toggleElem.classList.remove('fade');
       }, 500); // Should match transition duration in CSS
     }, 2000);
+
+// Mobile menu toggle
+const toggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-link');
+toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+    //Change menu to close icon
+    if (navLinks.classList.contains('show')){
+        toggle.textContent = '✖';
+        toggle.classList.add('close');
+    }else {
+        toggle.textContent = '☰ Menu';
+        toggle.classList.remove('close');
+    }
+})
