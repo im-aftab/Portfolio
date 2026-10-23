@@ -28,35 +28,43 @@ setInterval(() => {
 
 // Move glow
 const glow = document.querySelector('.ambient-glow');
+
+let targetX = window.innerWidth / 2;
+let targetY = window.innerHeight / 2;
+let currentX = targetX;
+let currentY = targetY;
+
 let inactivityTimer;
 let active = true;
 
 document.addEventListener('mousemove', (event) => {
-  const x = event.clientX;
-  const y = event.clientY;
-
-  if (active) {
-    glow.style.background = `
-      radial-gradient(circle at ${x}px ${y}px,
-        rgba(99, 102, 241, 0.35) 0%,
-        rgba(139, 92, 246, 0.20) 25%,
-        rgba(99, 102, 241, 0.10) 50%,
-        transparent 70%)
-    `;
-  }
+  targetX = event.clientX;
+  targetY = event.clientY;
 
   // Reset inactivity timer
   clearTimeout(inactivityTimer);
   active = true;
   inactivityTimer = setTimeout(() => {
     active = false;
-    // Return glow to top center after 3s inactivity
-    glow.style.background = `
-      radial-gradient(circle at 50% 20%,
-        rgba(99, 102, 241, 0.35) 0%,
-        rgba(139, 92, 246, 0.20) 25%,
-        rgba(99, 102, 241, 0.10) 50%,
-        transparent 70%)
-    `;
+    targetX = window.innerWidth / 2; // reset to center
+    targetY = window.innerHeight * 0.2; // 20% from top
   }, 3000);
 });
+
+function animateGlow() {
+  // Smoothly move current position toward target
+  currentX += (targetX - currentX) * 0.1;
+  currentY += (targetY - currentY) * 0.1;
+
+  glow.style.background = `
+    radial-gradient(circle at ${currentX}px ${currentY}px,
+      rgba(99, 102, 241, 0.35) 0%,
+      rgba(139, 92, 246, 0.20) 25%,
+      rgba(99, 102, 241, 0.10) 50%,
+      transparent 70%)
+  `;
+
+  requestAnimationFrame(animateGlow);
+}
+
+animateGlow();
